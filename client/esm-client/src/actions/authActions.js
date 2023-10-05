@@ -175,59 +175,10 @@ export const accountCreated = () => (dispatch) => {
   dispatch(userAccountCreated());
 };
 
-// export const signupUser = (displayName, email, password, password2) => dispatch => {
-//   dispatch(requestsignup());
-//   //verifying password and name.
-//   if(displayName.length < 3){
-//     return dispatch(signupError("Name must have atleast 3 characters."));
-//   }
 
-//   if(displayName.length > 50){
-//     return dispatch(signupError("Name must have atmost 50 characters."));
-//   }
-
-//   if(!/^[a-zA-Z ]*$/.test(displayName)){
-//     return dispatch(signupError("Name must contain only alphabets."));
-//   }
-
-//   if(password !== password2){
-//     return dispatch(signupError("Passwords do not match"));
-//   }
-
-// };
 
 export const logoutUser = () => (dispatch) => {
   dispatch(requestLogout());
   dispatch(receiveLogout());
 };
 
-// export const verifyAuth = () => dispatch => {
-//   dispatch(verifyRequest());
-//   myFirebase.auth().onAuthStateChanged(user => {
-//     if (user !== null) {
-//       dispatch(receiveLogin(user));
-//     }
-//     dispatch(verifySuccess());
-//   });
-// };
-
-// export const sendPasswordResetLink = (email) => dispatch => {
-//   dispatch(sendingPassReset());
-//   myFirebase.auth().sendPasswordResetEmail(email)
-//   .then(()=>{
-//     dispatch(sendPassResetSuccess());
-//   })
-//   .catch(error=>{
-//     console.error(error);
-//     switch(error.code){
-//       case 'auth/invalid-email':
-//         dispatch(sendPassResetError("Invalid email address."));
-//         break;
-//       case 'auth/user-not-found':
-//         dispatch(sendPassResetError("User not found with the given email address."));
-//         break;
-//       default:
-//         dispatch(sendPassResetError("Failed to send password reset email."));
-//     }
-//   })
-// }

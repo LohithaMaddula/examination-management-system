@@ -119,9 +119,10 @@ const mapStateToProps = (state) => {
       ?.replace(/\s+/g, "-")
       .toLowerCase(),
     userInfo: state.auth.user,
-    selectedAssignedTestName: state.selectedTest.selectedAssignedTestData.testName
-      ?.replace(/\s+/g, "-")
-      .toLowerCase(),
+    selectedAssignedTestName:
+      state.selectedTest.selectedAssignedTestData.testName
+        ?.replace(/\s+/g, "-")
+        .toLowerCase(),
   };
 };
 

@@ -8,7 +8,7 @@ require("dotenv").config();
 
 /**
  * @method - GET
- * @param - /profile/:profileID
+ * @param - /profile/:profileID 
  * @description - Fetch student profile using profileID
  */
 

@@ -46,7 +46,7 @@ router.post(
         errors: errors.array(),
       });
     }
-
+    console.log(req.body);
     const {
       firstName,
       lastName,
@@ -115,7 +115,7 @@ router.post(
           console.log("OK 200");
       }
 
-      // console.log(userData);
+      console.log(userData);
 
       const payload = {
         user: {
@@ -460,18 +460,19 @@ router.get("/confirm/:token", async (req, res) => {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     req.user = decoded.user;
 
-    await User.updateOne({ _id: req.user.id }, { isVerified: true }, function (
-      err,
-      message
-    ) {
-      if (err) {
-        return res.status(500).json({ message: "Verification Failed" });
-      } else {
-        return res.status(200).json({
-          message: "Email Verified!",
-        });
+    await User.updateOne(
+      { _id: req.user.id },
+      { isVerified: true },
+      function (err, message) {
+        if (err) {
+          return res.status(500).json({ message: "Verification Failed" });
+        } else {
+          return res.status(200).json({
+            message: "Email Verified!",
+          });
+        }
       }
-    });
+    );
   } catch (e) {
     console.error(e);
     return res.status(500).send({ message: "Verification Failed" });

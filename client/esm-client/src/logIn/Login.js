@@ -36,7 +36,7 @@ function Login(props) {
     <>
       <Row justify="center" align="middle" className="hero">
         <Col xs={22} sm={22} md={6} lg={6} className="signin__container">
-          <p className="sub-title">🎓 EMS</p>
+          <p className="sub-title">Welcome to Nhance</p>
 
           <Form
             name="basic"
@@ -75,6 +75,7 @@ function Login(props) {
                 textAlign: "center",
                 fontWeight: 500,
                 marginBottom: "15px",
+                
               }}
             >
               <Link to="/signup">New here? Create your account.</Link>

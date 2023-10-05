@@ -17,7 +17,6 @@ function ShowResult(props) {
 
   if (testInfo) {
     marks = testInfo.correct;
-    // name = testInfo.name;
     rightAnswers = testInfo.correct;
     submitMinutes = testInfo.submitMinutes;
     totalMarks = testInfo.totalMarks;
@@ -32,10 +31,6 @@ function ShowResult(props) {
           <Col className="gutter-row" xs={24} sm={24} md={14} xl={14}>
             <div className="result__wrapper">
               <div className="result__wrapper__header">
-                {/* <div className="result__heading">
-                  <div className="result__test__name">Name: </div>
-                  <div className="result__test__name__field">{name}</div>
-                </div> */}
                 <div className="result__heading">
                   <div className="result__test__name">Test Name: </div>
                   <div className="result__test__name__field">{testName}</div>
@@ -131,5 +126,4 @@ const mapStateToProps = (state) => {
     selectedTest: state.selectedTest.selectedTestResultData,
   };
 };
-
 export default connect(mapStateToProps, null)(ShowResult);

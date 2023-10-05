@@ -231,9 +231,12 @@ class CreateTest extends Component {
                   rules={[{ required: true, message: "Please select a class" }]}
                 >
                   <Select defaultValue="Class">
-                    <Option value="IX">IX</Option>
-                    {/* <Option value="XI">XI</Option>
-                    <Option value="XII">XII</Option> */}
+                    <Option value="CSE">CSE</Option>
+                    <Option value="CSSE"> CSSE</Option>
+                    <Option value="ECE">ECE</Option>
+                    <Option value="EEE">EEE</Option>
+                    <Option value="MECH">MECH</Option>
+                    <Option value="CIVIL">CIVIL</Option>
                   </Select>
                 </Form.Item>
               </div>
@@ -267,7 +270,7 @@ class CreateTest extends Component {
                   loading={this.state.isLoading}
                   className="sign__up"
                   htmlType="submit"
-                  disabled={(this.state.questions.length<1)?(true):(false)}
+                  disabled={this.state.questions.length < 1 ? true : false}
                 >
                   {this.state.isLoading ? "Creating Test" : "Create Test"}
                 </Button>

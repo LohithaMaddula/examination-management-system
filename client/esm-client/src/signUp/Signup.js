@@ -58,7 +58,7 @@ function Signup(props) {
     <>
       <Row justify="center" align="middle" className="hero">
         <Col xs={22} sm={22} md={8} lg={8} className="signup__container">
-          <p className="sub-title__signup">🎓 EMS</p>
+          <p className="sub-title__signup">🎓 NHANCE</p>
           <Form
             name="basic"
             initialValues={{
@@ -100,7 +100,7 @@ function Signup(props) {
                 },
               ]}
             >
-              <Input placeholder="abcd@gmail.com" />
+              <Input placeholder="123@gmail.com" />
             </Form.Item>
             <Form.Item
               name="password"
@@ -122,7 +122,7 @@ function Signup(props) {
                 },
               ]}
             >
-              <Input type="tel" placeholder="7275XXXXXX" />
+              <Input type="tel" placeholder="987xxxxxxx" />
             </Form.Item>
 
             <div className="element__wrapper">
@@ -165,9 +165,13 @@ function Signup(props) {
                 ]}
               >
                 <Select defaultValue="Class" disabled={showSelect}>
-                  <Option value="IX">IX</Option>
-                  {/* <Option value="XI">XI</Option>
-                    <Option value="XII">XII</Option> */}
+                  <Option value="CSE">CSE</Option>
+                  <Option value="CSSE"> CSSE</Option>
+                  <Option value ="ECE">ECE</Option>
+                  <Option value ="EEE">EEE</Option>
+                  <Option value ="MECH">MECH</Option>
+                  <Option value ="CIVIL">CIVIL</Option>
+                
                 </Select>
               </Form.Item>
             </div>

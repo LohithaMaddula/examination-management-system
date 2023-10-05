@@ -1,6 +1,6 @@
 @import '~antd/dist/antd.css';
 :root {
-  --primary: #1e90ff;
+  --primar: yellow;
   --light-primary: #7ebfff;
   --secondary: #fff;
   --warning: #ec971f;
@@ -50,18 +50,10 @@ html {
   cursor: pointer;
 }
 
-/* h1, h2, h3, h4, h5 {
-  font-family: 'Viga', sans-serif;
-}
-
-p, span, a {
-  font-family: 'Oxygen', sans-serif;
-} */
-
 body {
   margin: 0;
   padding: 0;
-  background-color: #f7f7f763;
+  background-color: white;
 }
 
 .hero {
@@ -69,7 +61,7 @@ body {
 }
 
 .container {
-  padding: 1em 20px 2em;
+  padding: 1em 25px 2em;
 }
 
 .is-active {
